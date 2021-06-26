@@ -6,8 +6,25 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #222222;
 }
 
 .main-app{
   padding:1.5rem;
+}
+
+.bg-dark-nav{
+  background-color: #343a40;
+}
+
+.bg-dark-card{
+  background-color: #303030;
+}
+
+.navbar-brand, .nav-link{
+  color: #ece0b9 !important;
+}
+
+.navbar-brand{
+  font-size: 1.5rem;
 }
