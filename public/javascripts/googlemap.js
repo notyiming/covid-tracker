@@ -4,6 +4,15 @@ function initMap() {
         maxZoom: 6,
         minZoom:3,
         center: new google.maps.LatLng(53, -5),
+        restriction:{
+            latLngBounds: {
+                east: 179.9999,
+                north: 85,
+                south: -85,
+                west: -179.9999
+            },
+            strictBounds: true
+        },
         disableDefaultUI: true,
         styles: [
             { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
