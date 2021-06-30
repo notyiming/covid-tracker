@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bffd99d-5540-432c-902f-8f1466253da9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/countryStats.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/getAllStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/getAllStats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/googlemap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/googlemap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/allStats.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/allStats.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/countryStats.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/countryStats.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../msg-proj-react" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -77,7 +78,7 @@
       <workItem from="1624488617364" duration="72000" />
       <workItem from="1624710938526" duration="10355000" />
       <workItem from="1624723110565" duration="1280000" />
-      <workItem from="1625054340039" duration="7481000" />
+      <workItem from="1625054340039" duration="14253000" />
     </task>
     <servers />
   </component>
@@ -105,29 +106,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625061511214" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1625060063905">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1625064542790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625060063905" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625064542790" />
     <state width="1291" height="219" key="GridCell.Tab.0.bottom/1920.-653.1333.871/0.0.1920.1040@1920.-653.1333.871" timestamp="1624365120332" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1625060063905">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1625064542789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625060063905" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625064542789" />
     <state width="1291" height="219" key="GridCell.Tab.0.center/1920.-653.1333.871/0.0.1920.1040@1920.-653.1333.871" timestamp="1624365120332" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1625060063904">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1625064542789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625060063904" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625064542789" />
     <state width="1291" height="219" key="GridCell.Tab.0.left/1920.-653.1333.871/0.0.1920.1040@1920.-653.1333.871" timestamp="1624365120331" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1625060063905">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1625064542790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625060063905" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625064542790" />
     <state width="1291" height="219" key="GridCell.Tab.0.right/1920.-653.1333.871/0.0.1920.1040@1920.-653.1333.871" timestamp="1624365120332" />
     <state x="2097" y="-583" key="SettingsEditor" timestamp="1624362158703">
       <screen x="1920" y="-653" width="1333" height="871" />
     </state>
     <state x="2097" y="-583" key="SettingsEditor/1920.-653.1333.871/0.0.1920.1040@1920.-653.1333.871" timestamp="1624362158703" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1625069934294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.-653.1333.871/0.0.1920.1040@0.0.1920.1040" timestamp="1625069934294" />
   </component>
 </project>

@@ -1,8 +1,8 @@
 //filling in the numbers for totals
 $.getJSON("https://disease.sh/v3/covid-19/all", function (data){
-    $("#total-cases").html(data.cases);
-    $("#total-deaths").html(data.deaths);
-    $("#total-recovered").html(data.recovered);
+    $("#total-cases").html(data.cases.toLocaleString('en-US'));
+    $("#total-deaths").html(data.deaths.toLocaleString('en-US'));
+    $("#total-recovered").html(data.recovered.toLocaleString('en-US'));
 });
 
 
@@ -14,9 +14,9 @@ $.getJSON("https://disease.sh/v3/covid-19/countries", function (data){
             "    <div id='"+ data[i].country +"' class=\"card text-white bg-dark-card h-100\">\n" +
             "      <div class=\"card-body\">\n" +
             "        <h5 class=\"card-title\"><span>"+data[i].country+"</span><img width='35px' height='25px' class=\"float-end\" src=\""+ data[i].countryInfo.flag +"\" alt=\"Card image cap\"></h5>\n" +
-            "        <p class=\"card-text\"> Total Cases: "+ data[i].cases + "</p>\n" +
-            "        <p class=\"card-text\">Deaths: "+ data[i].deaths + "</p>\n" +
-            "        <p class=\"card-text\">Recovered: "+ data[i].recovered + "</p>\n" +
+            "        <p class=\"card-text\"> Total Cases: "+ data[i].cases.toLocaleString('en-US') + "</p>\n" +
+            "        <p class=\"card-text\">Deaths: "+ data[i].deaths.toLocaleString('en-US') + "</p>\n" +
+            "        <p class=\"card-text\">Recovered: "+ data[i].recovered.toLocaleString('en-US') + "</p>\n" +
             "      </div>\n" +
             "      <div class=\"card-footer\">\n" +
             "        <small class=\"text-muted\">Last updated: "+ date.toLocaleString() +"</small>\n" +
@@ -29,6 +29,8 @@ $.getJSON("https://disease.sh/v3/covid-19/countries", function (data){
         $("#countryList").append("<a class='dropdown-item' href='/"+ data[i].country +"'>"+ data[i].country +"</a>");
     }
 });
+
+
 
 
 function filterFunction() {

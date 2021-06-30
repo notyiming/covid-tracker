@@ -3,9 +3,8 @@ function initMap() {
         zoom:5,
         maxZoom: 6,
         minZoom:3,
-        center: new google.maps.LatLng(50, 10),
+        center: new google.maps.LatLng(53, -5),
         disableDefaultUI: true,
-        // mapId: "8e0a97af9386fef",
         styles: [
             { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
             { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -99,8 +98,9 @@ function initMap() {
             let lat = data[i].countryInfo.lat;
             let long = data[i].countryInfo.long;
             let content = "<h2>"+ data[i].country +"</h2>" +
-                "<h5>Total Cases: "+ data[i].cases +"</h5>" +
-                "<h5>New Cases: +"+ data[i].todayCases +"</h5>"
+                "<h5>Total Cases: "+ data[i].cases.toLocaleString('en-US') +"</h5>" +
+                "<h5>Deaths: "+ data[i].deaths.toLocaleString('en-US') +"</h5>" +
+                "<a class='btn btn-secondary' href='/"+ data[i].country +"'>View Full Stats</a>"
             let icon = {
                 url:data[i].countryInfo.flag,
                 scaledSize: new google.maps.Size(30,20)
