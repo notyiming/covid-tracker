@@ -10,7 +10,7 @@ $.getJSON("https://disease.sh/v3/covid-19/all", function (data){
 $.getJSON("https://disease.sh/v3/covid-19/countries", function (data){
     for(let i = 0; i < data.length; i++){
         let date = new Date(data[i].updated);
-        $("#all-countries").append("<div class=\"col-xl-3 col-sm-12 p-3\">\n" +
+        $("#all-countries").append("<div class=\"col-xl-3 col-sm-12 p-3 country\">\n" +
             "    <div id='"+ data[i].country +"' class=\"card text-white bg-dark-card h-100\">\n" +
             "      <div class=\"card-body\">\n" +
             "        <h5 class=\"card-title\"><span>"+data[i].country+"</span><img width='35px' height='25px' class=\"float-end\" src=\""+ data[i].countryInfo.flag +"\" alt=\"Card image cap\"></h5>\n" +
@@ -20,7 +20,7 @@ $.getJSON("https://disease.sh/v3/covid-19/countries", function (data){
             "      </div>\n" +
             "      <div class=\"card-footer\">\n" +
             "        <small class=\"text-muted\">Last updated: "+ date.toLocaleString() +"</small>\n" +
-            "        <a href='/"+ data[i].country +"' class='btn btn-secondary float-end'>View Full Stats</a>\n" +
+            "        <a href='/"+ data[i].country +"' class='btn btn-secondary mt-2 float-end'>View Full Stats</a>\n" +
             "      </div>\n" +
             "    </div>\n" +
             "  </div>");
@@ -31,20 +31,19 @@ $.getJSON("https://disease.sh/v3/covid-19/countries", function (data){
 });
 
 
-
-
 function filterFunction() {
-    var input, filter, ul, li, a, i;
+    var input, filter, span, country, i, div, txtValue;
     input = document.getElementById("searchCountryInput");
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
+    div = document.getElementById("all-countries");
+    country = div.getElementsByClassName("country");
+    for (i = 0; i < country.length; i++) {
+        span = country[i].getElementsByTagName("span");
+        txtValue = span[0].textContent || span[0].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
+            country[i].style.display = "";
         } else {
-            a[i].style.display = "none";
+            country[i].style.display = "none";
         }
     }
 }
