@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html>
 <%- include('../views/head'); %>
+
   <body>
-  <%- include('../views/navbar'); %>
-    <div class="main-app">
-      <div class="container">
-        <h1 class="text-white ps-3">World Stats 🌎</h1>
-        <div class="card-group p-3">
+    <%- include('../views/navbar'); %>
+      <div class="main-app">
+        <div class="container">
+          <h1 class="text-white ps-3">World Stats 🌎</h1>
+          <div class="card-group p-3">
 
-          <div class=" card text-white bg-secondary col-sm-12 col-xl-4 p-3">
-            <h4>Total Cases:</h4> <span id="total-cases"></span>
+            <div class=" card text-white bg-secondary col-sm-12 col-xl-4 p-3">
+              <h4>Total Cases:</h4> <span id="total-cases"></span>
+            </div>
+            <div class="card text-white bg-danger col-sm-12 col-xl-4 p-3">
+              <h4>Total Deaths:</h4> <span id="total-deaths"></span>
+            </div>
+            <div class="card text-white bg-success col-sm-12 col-xl-4 p-3">
+              <h4>Total Recovered:</h4> <span id="total-recovered"></span>
+            </div>
           </div>
-          <div class="card text-white bg-danger col-sm-12 col-xl-4 p-3">
-            <h4>Total Deaths:</h4> <span id="total-deaths"></span>
-          </div>
-          <div class="card text-white bg-success col-sm-12 col-xl-4 p-3">
-            <h4>Total Recovered:</h4> <span id="total-recovered"></span>
+          <div class="p-3">
+            <div class="input-group mt-3">
+              <input type="text" class="form-control p-3" placeholder="Search Country.." id="searchCountryInput"
+                onkeyup="filterFunction()">
+            </div>
           </div>
         </div>
-        <div class="p-3">
-          <div class="input-group mt-3">
-            <input type="text" class="form-control p-3" placeholder="Search Country.." id="searchCountryInput" onkeyup="filterFunction()">
-          </div>
+        <hr>
+      </div>
+
+      <h1 class="text-white ms-5">Country Stats</h1>
+      <div id="all-countries" class="card-group p-3"></div>
+      <footer class="text-muted">
+        <div class="container">
+
+          <p class="float-end p-5">
+            ©2021 Tan Yi Ming
+          </p>
         </div>
-      </div>
-      <hr>
-    </div>
-
-    <h1 class="text-white ms-5">Country Stats</h1>
-    <div id="all-countries" class="card-group p-3"></div>
-    <footer class="text-muted">
-      <div class="container">
-
-        <p class="float-end p-5">
-          ©2021 Tan Yi Ming
-        </p>
-      </div>
-    </footer>
+      </footer>
   </body>
+
 </html>

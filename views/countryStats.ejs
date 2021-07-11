@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html>
 <%- include('../views/head'); %>
-<body>
-<%- include('../views/navbar'); %>
-<div class="main-app">
-    <h1 class="text-white ms-5"><%= country %><span class="p-3" id="countryImg"></span></h1>
-    <div class="big-container">
-        <div id="stats-container" class="text-white container"></div>
-    </div>
-    <footer class="text-muted">
-        <div class="container">
 
-            <p class="float-end p-5">
-                ©2021 Tan Yi Ming
-            </p>
-        </div>
-    </footer>
-</div>
-</body>
-<script>
-    $.getJSON("https://disease.sh/v3/covid-19/countries/"+"<%= country %>", function (data){
-        console.log(data);
-        let date = new Date(data.updated);
-        $("#countryImg").append("<img width='35px' height='25px' src=\""+ data.countryInfo.flag +"\" alt=\"Card image cap\">")
-        $("#stats-container").append("<h3>Total Cases: "+ data.cases.toLocaleString('en-US') +" (+" + data.todayCases.toLocaleString('en-US') + ")</h3>" +
-            "<h3>Total Deaths: "+ data.deaths.toLocaleString('en-US') +" (+" + data.todayDeaths.toLocaleString('en-US') + ")</h3>" +
-            "<h3>Total Recovered: "+ data.recovered.toLocaleString('en-US') +" (+" + data.todayRecovered.toLocaleString('en-US') + ")</h3>" +
-            "<hr>" +
-            "<h5>Active Cases: "+ data.active.toLocaleString('en-US') +"</h5>" +
-            "<h5>Cases per Million: "+ data.casesPerOneMillion.toLocaleString('en-US')+"</h5>" +
-            "<h5>Total Tests: "+ data.tests.toLocaleString('en-US') +"</h5>" +
-            "<h5>Tests per Million: "+ data.testsPerOneMillion.toLocaleString('en-US') +"</h5>" +
-            "<footer class=\"text-muted\">\n" +
-            "            <p class=\"float-end\">\n" +
-            "                <small class=\"text-muted\">Last updated: "+ date.toLocaleString() +"</small>\n" +
-            "            </p>\n" +
-            "    </footer>")
-    });
-</script>
+    <body>
+        <%- include('../views/navbar'); %>
+            <div class="main-app">
+                <h1 class="text-white ms-5">
+                    <%= country %><span class="p-3" id="countryImg"></span>
+                </h1>
+                <div class="big-container">
+                    <div id="stats-container" class="text-white container"></div>
+                </div>
+                <footer class="text-muted">
+                    <div class="container">
+
+                        <p class="float-end p-5">
+                            ©2021 Tan Yi Ming
+                        </p>
+                    </div>
+                </footer>
+            </div>
+    </body>
+    <script>
+        $.getJSON("https://disease.sh/v3/covid-19/countries/" + "<%= country %>", function (data) {
+            console.log(data);
+            let date = new Date(data.updated);
+            $("#countryImg").append("<img width='35px' height='25px' src=\"" + data.countryInfo.flag + "\" alt=\"Card image cap\">")
+            $("#stats-container").append("<h3>Total Cases: " + data.cases.toLocaleString('en-US') + " (+" + data.todayCases.toLocaleString('en-US') + ")</h3>" +
+                "<h3>Total Deaths: " + data.deaths.toLocaleString('en-US') + " (+" + data.todayDeaths.toLocaleString('en-US') + ")</h3>" +
+                "<h3>Total Recovered: " + data.recovered.toLocaleString('en-US') + " (+" + data.todayRecovered.toLocaleString('en-US') + ")</h3>" +
+                "<hr>" +
+                "<h5>Active Cases: " + data.active.toLocaleString('en-US') + "</h5>" +
+                "<h5>Cases per Million: " + data.casesPerOneMillion.toLocaleString('en-US') + "</h5>" +
+                "<h5>Total Tests: " + data.tests.toLocaleString('en-US') + "</h5>" +
+                "<h5>Tests per Million: " + data.testsPerOneMillion.toLocaleString('en-US') + "</h5>" +
+                "<footer class=\"text-muted\">\n" +
+                "            <p class=\"float-end\">\n" +
+                "                <small class=\"text-muted\">Last updated: " + date.toLocaleString() + "</small>\n" +
+                "            </p>\n" +
+                "    </footer>")
+        });
+    </script>
+
 </html>
